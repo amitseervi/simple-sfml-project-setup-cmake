@@ -1,0 +1,18 @@
+// .vscode/launch.json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Sfml Game - form launch",
+      "type": "cppdbg", // or "lldb" on macOS
+      "request": "launch",
+      "program": "${command:cmake.launchTargetPath}", // path from CMake Tools
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "lldb" // use "lldb" on macOS
+    }
+  ]
+}

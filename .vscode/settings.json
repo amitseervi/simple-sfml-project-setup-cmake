@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "any": "cpp",
+        "complex": "cpp",
+        "optional": "cpp",
+        "system_error": "cpp",
+        "variant": "cpp",
+        "iostream": "cpp"
+    }
+}
