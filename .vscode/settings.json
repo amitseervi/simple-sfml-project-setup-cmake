@@ -5,6 +5,10 @@
         "optional": "cpp",
         "system_error": "cpp",
         "variant": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "__config": "cpp",
+        "locale": "cpp",
+        "bitset": "cpp",
+        "format": "cpp"
     }
 }

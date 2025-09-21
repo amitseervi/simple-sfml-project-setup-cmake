@@ -9,21 +9,15 @@ find_library(COCOA_FRAMEWORK Cocoa)
 find_library(IOKIT_FRAMEWORK IOKit)
 find_library(COREFOUNDATION_FRAMEWORK CoreFoundation)
 
+add_library(rignis-engine STATIC src/engine_configuration.cpp src/engine.cpp src/entity.cpp src/screen.cpp)
 
-# Tell CMake where SFML is installed (adjust path if needed)
-# SFML paths
-# set(SFML_INCLUDE_DIR "${CMAKE_SOURCE_DIR}/external/SFML/include")
-# set(SFML_LIB_DIR "${CMAKE_SOURCE_DIR}/external/SFML/build/lib")
-
-# Add SFML include and library dirs
-# include_directories(${SFML_INCLUDE_DIR})
-# link_directories(${SFML_LIB_DIR})
-
-add_executable(sfml-app main.cpp)
-add_subdirectory(library/rignis-engine)
+target_include_directories(rignis-engine
+    PUBLIC # <- makes headers available to users of MyLib
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
+)
 
 # Link SFML
-target_link_libraries(sfml-app PRIVATE
+target_link_libraries(rignis-engine PRIVATE
     SFML::Graphics
     SFML::Audio
     SFML::Network

@@ -43,7 +43,8 @@ int main()
     sf::CircleShape circle(2);
     circle.setOrigin({0, 0});
     circle.setFillColor(sf::Color::Green);
-    float velocity = 0.01f;
+    float velocityX = 0.01f;
+    float velocityY = 0.02f;
     sf::Clock clock;
     float circleX = .0f;
     float circleY = .0f;
@@ -74,8 +75,8 @@ int main()
                 }
             }
         }
-        circleX -= dt * velocity;
-        circleY -= dt * velocity;
+        circleX -= dt * velocityX;
+        circleY -= dt * velocityY;
         circle.setOrigin({circleX, circleY});
         window.setView(viewPort);
         window.clear(sf::Color::Black);
